@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!--page:contact-->
+{{HEAD}}
+<title>Contact | Just Business</title>
+<meta name="description" content="Pitch your venture, invest alongside Just Business, or partner with the ecosystem.">
+</head>
+<body>
+{{HEADER}}
+<main id="main">
+<section class="phero" data-hero aria-labelledby="h1">
+  <div class="stars"></div>
+  <div class="phero-x" aria-hidden="true"><svg viewBox="-60 -60 120 120" class="glow"><use href="#x" fill="#32E3F7"/></svg><svg viewBox="-60 -60 120 120"><use href="#x" fill="url(#og)"/></svg></div>
+  <div class="wrap">
+    <div class="eyebrow rv"><i></i>Contact</div>
+    <h1 class="h1 rv" id="h1">Let’s talk <span class="grad-text">business.</span></h1>
+    <p class="lead rv">Founders building something just, investors who want to back them, and partners who want to help them grow.</p>
+  </div>
+</section>
+
+<section class="sec" aria-labelledby="paths-h">
+  <div class="wrap">
+    <h2 class="sr-only" id="paths-h">Choose your path</h2>
+    <div class="paths">
+      <a class="card path rv" href="#form" data-type="founder"><span class="mono">Founders</span><h3>Pitch your venture</h3><p>A profitable model, a measurable mission and the ambition to scale. Tell us what you’re building.</p><span class="tlink">Start here<svg aria-hidden="true"><use href="#ar"/></svg></span></a>
+      <a class="card path rv" href="#form" data-type="investor" style="--d:.06s"><span class="mono">Investors</span><h3>Invest alongside us</h3><p>Co-invest in ventures built for compounding returns and compounding impact.</p><span class="tlink">Start a conversation<svg aria-hidden="true"><use href="#ar"/></svg></span></a>
+      <a class="card path o rv" href="#form" data-type="partner" style="--d:.12s"><span class="mono">Partners</span><h3>Join the ecosystem</h3><p>Corporates, non-profits and experts who want to help our ventures, and Not For Sale, go further.</p><span class="tlink or">Partner with us<svg aria-hidden="true"><use href="#ar"/></svg></span></a>
+    </div>
+  </div>
+</section>
+
+<section class="sec tight" id="form" aria-labelledby="f-h">
+  <div class="wrap contact-grid">
+    <div>
+      <div class="eyebrow rv"><i></i>Send a message</div>
+      <h2 class="h2 rv" id="f-h">Tell us about you.</h2>
+      <div class="contact-info rv" style="margin-top:36px">
+        <div><span class="mono">Just Business</span><a href="https://www.linkedin.com/company/just-business-inc" rel="noopener">LinkedIn</a></div>
+        <div><span class="mono">Not For Sale</span><a href="https://wearenotforsale.org/" rel="noopener">wearenotforsale.org</a></div>
+        <div><span class="mono">Press</span><span style="color:var(--t2)">Choose “Press” in the form and we’ll route your request.</span></div>
+      </div>
+    </div>
+    <form class="card form rv" id="contact-form" novalidate>
+      <div class="field"><label for="f-name">Full name</label><input id="f-name" name="name" autocomplete="name" required><span class="err">Enter your name.</span></div>
+      <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required placeholder="you@company.com"><span class="err">Enter a valid email address.</span></div>
+      <div class="field"><label for="f-type">I am a…</label><select id="f-type" name="type" required><option value="">Choose one</option><option value="founder">Founder</option><option value="investor">Investor</option><option value="partner">Partner</option><option value="press">Press</option><option value="other">Other</option></select><span class="err">Choose who you are.</span></div>
+      <div class="field"><label for="f-org">Organisation <span>(optional)</span></label><input id="f-org" name="org" autocomplete="organization"></div>
+      <div class="field full"><label for="f-msg">Message</label><textarea id="f-msg" name="message" required minlength="20" placeholder="What are you building, or how would you like to work together?"></textarea><span class="err">Tell us a little more (at least 20 characters).</span></div>
+      <div class="form-ok" id="form-ok" tabindex="-1" role="status"><b>Thanks, your message is ready.</b> This concept form isn’t connected to an inbox yet; in production it will send to the Just Business team.</div>
+      <div class="row"><p class="note">We read every message. Founders: a short description of your model and impact is perfect to start.</p><button class="btn btn-cy" type="submit">Send message<svg aria-hidden="true"><use href="#ar"/></svg></button></div>
+    </form>
+  </div>
+</section>
+</main>
+{{FOOTER}}
+{{SCRIPTS}}
+<script>
+document.querySelectorAll('.path').forEach(a => a.addEventListener('click', () => { const s = document.getElementById('f-type'); s.value = a.dataset.type; setTimeout(() => document.getElementById('f-name').focus({preventScroll:true}), 500); }));
+</script>
+</body>
+</html>

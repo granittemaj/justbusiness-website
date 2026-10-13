@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!--page:ventures-->
+{{HEAD}}
+<title>Venture | Just Business</title>
+<meta name="description" content="A Just Business portfolio company: the business it builds and the impact it creates.">
+</head>
+<body data-venture-page>
+{{HEADER}}
+<main id="main">
+<section class="vd-hero" data-hero aria-labelledby="vd-name">
+  <div class="bg"><img id="vd-img" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="" width="1600" height="1000"></div>
+  <div class="wrap">
+    <nav class="crumbs rv" aria-label="Breadcrumb"><a href="ventures.html">Ventures</a><span aria-hidden="true">/</span><span id="vd-crumb" aria-current="page"></span></nav>
+    <div class="who rv"><span class="chip c" id="vd-chip"><i></i>Planet</span><span class="mono" id="vd-sector" style="color:var(--t2)"></span></div>
+    <h1 class="rv"><span id="vd-name"></span></h1>
+    <p class="lead rv" id="vd-outcome" style="margin-top:18px;font-size:clamp(20px,1.9vw,28px);color:var(--t1);max-width:30ch"></p>
+  </div>
+</section>
+
+<section class="sec" aria-label="The business and the impact">
+  <div class="wrap vd-body">
+    <div>
+      <div class="vd-cols">
+        <article class="card vd-col biz rv"><span class="mono">The business</span><p id="vd-biz"></p></article>
+        <article class="card vd-col imp rv" style="--d:.08s"><span class="mono">The impact</span><p id="vd-imp"></p></article>
+      </div>
+      <h2 class="h3 rv" style="margin-top:48px">Milestones</h2>
+      <div class="facts" id="vd-facts"></div>
+    </div>
+    <aside class="vd-side">
+      <div class="card vd-globe rv">
+        <div class="mono"><span>Location</span><span id="vd-place" style="color:var(--cyan)"></span></div>
+        <div class="globe-box" role="img" aria-label="Globe highlighting this venture’s location"><canvas id="globe"></canvas><div class="tip" id="tip"></div></div>
+      </div>
+      <a class="card next-v rv" id="vd-next" href="ventures.html"><div><small>Next venture</small><b id="vd-next-name"></b></div><i><svg aria-hidden="true"><use href="#ar"/></svg></i></a>
+    </aside>
+  </div>
+</section>
+
+<section class="sec tight" id="vd-news-wrap" aria-labelledby="vn-h">
+  <div class="wrap">
+    <div class="head"><h2 class="h3 rv" id="vn-h">In the news</h2><a class="tlink rv" href="news.html">All news<svg aria-hidden="true"><use href="#ar"/></svg></a></div>
+    <ul class="news-list" id="vd-news"></ul>
+  </div>
+</section>
+
+<section class="cta" aria-labelledby="ct-h">
+  <div class="wrap">
+    <h2 class="rv" id="ct-h">Building <span class="cy">something just?</span></h2>
+    <p class="rv">Join an ecosystem where one company’s win compounds across the rest.</p>
+    <div class="acts rv"><a class="btn btn-cy" href="contact.html?type=founder">Pitch your venture<svg aria-hidden="true"><use href="#ar"/></svg></a><a class="btn btn-line" href="ventures.html">All ventures</a></div>
+  </div>
+</section>
+</main>
+{{FOOTER}}
+{{SCRIPTS}}
+{{GLOBE}}
+<script>
+(function(){
+  const v = window.__venture; if (!v) return;
+  const place = {name:v.name, note:v.place, at:v.at, k:'jb'};
+  const g = JBGlobe(document.getElementById('globe'), {places:[place], hub:JB.HUB, tip:document.getElementById('tip'), rotate:[-v.at[0], -v.at[1] * .7], autoRotate:false, scale:.4});
+  setTimeout(() => g.hover(0), 800);
+})();
+</script>
+</body>
+</html>
