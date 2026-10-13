@@ -28,9 +28,9 @@ def header(active):
 <header class="nav"><div class="wrap">
   <a class="logo" href="index.html" aria-label="Just Business, home"><img src="{LOGO}" alt="Just Business" width="131" height="20"></a>
   <nav aria-label="Primary"><ul>{links}</ul></nav>
-  <div class="acts"><a class="btn btn-line btn-sm" href="https://wearenotforsale.org/" rel="noopener">Support Not For Sale</a><a class="btn btn-cy btn-sm" href="contact.html">Contact us</a><button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="sheet"><i></i></button></div>
+  <div class="acts"><a class="btn btn-cy btn-sm" href="contact.html">Contact us</a><button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="sheet"><i></i></button></div>
 </div></header>
-<div class="sheet" id="sheet" aria-hidden="true"><ul>{sheet}</ul><div class="acts"><a class="btn btn-cy" href="contact.html">Contact us</a><a class="btn btn-or" href="https://wearenotforsale.org/" rel="noopener">Support Not For Sale</a></div></div>"""
+<div class="sheet" id="sheet" aria-hidden="true"><ul>{sheet}</ul><div class="acts"><a class="btn btn-cy" href="contact.html">Contact us</a></div></div>"""
 
 FOOTER = f"""<footer class="foot"><div class="wrap">
   <div class="foot-g">

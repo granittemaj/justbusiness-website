@@ -75,7 +75,7 @@ window.JB = (function(){
   ];
 
   const fmt = d => new Date(d + 'T12:00:00').toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'});
-  const places = () => [...nfsProjects, ...ventures.map(v => ({name:v.name, note:v.place, at:v.at, k:'jb', slug:v.slug}))];
+  const places = () => [...ventures.map(v => ({name:v.name, note:v.place, at:v.at, k:'jb', slug:v.slug})), ...nfsProjects];
 
   return {HUB, ventures, nfsProjects, news, fmt, places, img, NEWS_URL:'https://www.justbusiness.is/news', NFS_URL:'https://wearenotforsale.org/'};
 })();
