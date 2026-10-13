@@ -167,7 +167,7 @@
 (function(){
   const D = window.JB, places = D.places(), list = document.getElementById('places');
   const COL = {nfs:'var(--orange)', jb:'var(--cyan)'};
-  list.innerHTML = places.map((p, i) => `<button class="place" data-i="${i}"><i style="background:${COL[p.k]}"></i>${p.name}<small>${p.k === 'nfs' ? 'NFS' : 'JB'}</small></button>`).join('');
+  list.innerHTML = places.map((p, i) => `<button class="place" data-i="${i}"><i style="background:${COL[p.k]}"></i>${p.name}<small>${p.k === 'nfs' ? 'Not For Sale' : 'Venture'}</small></button>`).join('');
   const btns = [...list.querySelectorAll('.place')];
   const g = JBGlobe(document.getElementById('globe'), {places, hub:D.HUB, tip:document.getElementById('tip'), onHover:i => btns.forEach((b, j) => b.classList.toggle('on', j === i))});
   btns.forEach(b => {
